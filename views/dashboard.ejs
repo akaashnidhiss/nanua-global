@@ -113,8 +113,13 @@
                 <div class="chart-wrapper">
                     <div class="chart-title">
                         <h3 class="display-3">Newsletter</h3>
-                        <textarea class="user_div" cols="90" rows="20">
-        </textarea>
+                        <form action="/sendemail" method="POST">
+                            <textarea cols="50" rows="10" type="text" name="newsletter" id="newsletter" placeholder="Newsletter" class="form-control"></textarea>
+                            <a href="/announcements">
+                                <button type="submit" class="btn btn-primary">Post Newsletter</button>
+                            </a>
+                        </form>
+
                     </div>
                 </div>
             </div>

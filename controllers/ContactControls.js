@@ -58,6 +58,7 @@ exports.sendEmail = async(req, res, next) => {
             subject: "Hello ✔", // Subject line
             text: "Hello world?", // plain text body
             // html: "<b>Hello world?</b>", // html body
+            html: req.body.newsletter, // html body
         });
         console.log("Message sent: %s", info.messageId);
         res.send('<h1>Email sent :)<h1>')

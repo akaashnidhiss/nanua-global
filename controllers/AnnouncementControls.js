@@ -10,7 +10,7 @@ exports.postAnnouncement = async(req, res, next) => {
 
     const Announce = await announcement.save();
     const AllAnnounce = await AnnouncementInfo.find().sort({ createdAt: 'desc' });
-    res.render('Announcement', { announcements: AllAnnounce });
+    res.redirect('/announcements');
 
 
 }
