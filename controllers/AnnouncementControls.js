@@ -21,6 +21,14 @@ exports.getAnnouncements = async(req, res, next) => {
 
 }
 
+exports.getDashboardData = async(req, res, next) => {
+    const AllAnnounce = await AnnouncementInfo.find().sort({ createdAt: 'desc' });
+    res.render('dashboard', { announcements: AllAnnounce });
+
+}
+
+
+
 exports.deleteAnnouncements = async(req, res, next) => {
     await AnnouncementInfo.findByIdAndDelete(req.params.id);
     res.redirect('/announcements');

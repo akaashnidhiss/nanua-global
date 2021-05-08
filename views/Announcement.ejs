@@ -2,17 +2,249 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Announcement</title>
+    <title>Nanua Global | Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //custom-theme -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+    <!-- gallery -->
+    <link href="css/lsb.css" rel="stylesheet" type="text/css">
+    <!-- //gallery -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="//fonts.googleapis.com/css?family=Prompt:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="css/css_blog.css">
 </head>
 
 <body>
-    <div class="container">
-        <%- include('layouts/announcement.ejs') %>
+    <div class="banner1">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header navbar-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <div class="header">
+                    <img src="images\LOGO-1.png" width="200" height="40" alt=" " class="img-responsive" />
+                    <!--<h1><a class="navbar-brand" href="index.html"><span>N</span>anua Global</a></h1>-->
+                </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <nav class="link-effect-2" id="link-effect-2">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/home"><span data-hover="Home">Home</span></a></li>
+                        <li><a href="/courses"><span data-hover="Courses">Courses</span></a></li>
+                        <li><a href="/services"><span data-hover="Services">FAQs</span></a></li>
+                        <li><a href="/blog"><span data-hover="Blog">Blog</span></a></li>
+                        <li><a href="/mail"><span data-hover="Mail Us">Mail Us</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="w3_agile_phone">
+                <p><i class="fa fa-phone" aria-hidden="true"></i> +91 96544 20600</p>
+            </div>
+        </nav>
+        <div class="wthree_banner1_info">
+            <div class="container">
+                <h3><span>A</span>nnouncements</h3>
+            </div>
+        </div>
     </div>
+
+    <div class="team">
+        <div class="container">
+            <div class="w3_agile_team_grid">
+                <div class="w3_agile_team_grid_left">
+                    <p>01</p>
+                    <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                </div>
+                <div class="w3_agile_team_grid_right">
+                    <h3><span>New Events </span></h3>
+
+                    <%- include('layouts/announcement.ejs') %>
+
+
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="agileits_w3layouts_team_grids">
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('layouts/footer.ejs')%>
+        <!-- carousal -->
+        <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(document).on('ready', function() {
+                $(".center").slick({
+                    dots: true,
+                    infinite: true,
+                    centerMode: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: true,
+                            centerMode: false,
+                            slidesToShow: 2
+                        }
+                    }, {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: false,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }]
+                });
+            });
+        </script>
+        <!-- //carousal -->
+        <!-- flexisel -->
+        <script type="text/javascript">
+            $(window).load(function() {
+                $("#flexiselDemo1").flexisel({
+                    visibleItems: 4,
+                    animationSpeed: 1000,
+                    autoPlay: true,
+                    autoPlaySpeed: 3000,
+                    pauseOnHover: true,
+                    enableResponsiveBreakpoints: true,
+                    responsiveBreakpoints: {
+                        portrait: {
+                            changePoint: 480,
+                            visibleItems: 1
+                        },
+                        landscape: {
+                            changePoint: 640,
+                            visibleItems: 2
+                        },
+                        tablet: {
+                            changePoint: 768,
+                            visibleItems: 2
+                        }
+                    }
+                });
+
+            });
+        </script>
+        <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+        <!-- //flexisel -->
+        <!-- gallery-pop-up -->
+        <script src="js/lsb.min.js"></script>
+        <script>
+            $(window).load(function() {
+                $.fn.lightspeedBox();
+            });
+        </script>
+        <!-- //gallery-pop-up -->
+        <!-- flexSlider -->
+        <script defer src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    start: function(slider) {
+                        $('body').removeClass('loading');
+                    }
+                });
+            });
+        </script>
+        <!-- //flexSlider -->
+        <!-- banner-type-text -->
+        <script src="js/typed.js" type="text/javascript"></script>
+        <script>
+            $(function() {
+
+                $("#typed").typed({
+                    // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+                    stringsElement: $('#typed-strings'),
+                    typeSpeed: 30,
+                    backDelay: 500,
+                    loop: false,
+                    contentType: 'html', // or text
+                    // defaults to false for infinite loop
+                    loopCount: false,
+                    callback: function() {
+                        foo();
+                    },
+                    resetCallback: function() {
+                        newTyped();
+                    }
+                });
+
+                $(".reset").click(function() {
+                    $("#typed").typed('reset');
+                });
+
+            });
+
+            function newTyped() { /* A new typed object */ }
+
+            function foo() {
+                console.log("Callback");
+            }
+        </script>
+        <!-- //banner-type-text -->
+        <!-- start-smooth-scrolling -->
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event) {
+                    event.preventDefault();
+                    $('html,body').animate({
+                        scrollTop: $(this.hash).offset().top
+                    }, 1000);
+                });
+            });
+        </script>
+        <!-- start-smooth-scrolling -->
+        <!-- for bootstrap working -->
+        <script src="js/bootstrap.js"></script>
+        <!-- //for bootstrap working -->
+        <!-- here stars scrolling icon -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                /*
+                    var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear' 
+                    };
+                */
+
+                $().UItoTop({
+                    easingType: 'easeOutQuart'
+                });
+
+            });
+        </script>
+        <!-- //here ends scrolling icon -->
 </body>
 
 </html>

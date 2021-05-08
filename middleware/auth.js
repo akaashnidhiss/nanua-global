@@ -5,7 +5,7 @@ module.exports = {
         var user = firebase.auth().currentUser;
         if (user !== null) {
             req.user = user;
-            res.render('dashboard')
+            // res.render('dashboard')
             next();
         } else {
             res.redirect('/login');

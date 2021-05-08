@@ -35,6 +35,13 @@ router.get('/blog', function(req, res) {
 router.get('/services', function(req, res) {
     res.render('services');
 })
+router.get('/counselling', function(req, res) {
+    res.render('counselling');
+})
+router.get('/tos', function(req, res) {
+    res.render('tos');
+})
+
 
 // @desc Register page
 // @route GET /register
@@ -61,9 +68,9 @@ router.get('/logout', authenticate.signOut, function(req, res) {
 
 // @desc Dashboard page
 // @route GET /dashboard
-router.get('/dashboard', authenticate.isAuthenticated, function(req, res) {
-    res.render('dashboard');
-})
+router.get('/dashboard', authenticate.isAuthenticated, AnnouncementControls.getDashboardData)
+
+
 
 // @desc Post Announcements from Dash
 // @route GET /dashboard/announcement

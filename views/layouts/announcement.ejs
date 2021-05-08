@@ -1,21 +1,23 @@
 <% announcements.forEach(function (announcement) { %>
 
-    <div class="card mt-3 mb-3">
+    <div class="card mt-3 mb-3" style="">
         <div class="card-body">
 
-            <h3 class="card-title">
+            <h3 class="card-title" style="font-size: large; ">
                 <%= announcement.title %>
             </h3>
-            <h3 class="card-subtitle text-muted mb-2">
+            <h3 class="card-subtitle text-muted mb-2" style="font-size: small; color: lightslategrey;">
                 <%= announcement.createdAt.toLocaleDateString() %>
             </h3>
-            <h3 class="card-text mb-2">
+            <h3 class="card-text mb-2" style="font-size: medium; font-weight: normal;">
                 <%= announcement.description %>
             </h3>
-            <form action="/<%= announcement.id %>?_method=DELETE" class="d-inline" method="POST">
+            <!-- <form action="/<%= announcement.id %>?_method=DELETE" class="d-inline" method="POST">
                 <button type="submit" class="btn btn-danger">Delete</button>
-            </form>
+            </form> -->
         </div>
     </div>
+
+
 
     <% }) %>
