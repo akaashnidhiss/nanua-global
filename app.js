@@ -2,11 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const path = require('path');
-const exphbs = require('express-handlebars');
-const passport = require('passport');
 // import forms from './dbForms.js'
 
-const logger = require("./middleware/logger");
+// const logger = require("./middleware/logger");
 const connectDB = require('./config/db.js');
 const mongoConnect = require('./util/database').mongoConnect;
 const methodOverride = require('method-override');
@@ -50,21 +48,12 @@ app.set('view engine', 'ejs');
 app.use('/', require('./routes/index.js'));
 
 app.use(express.static(path.join(__dirname, 'public'))); // static path
-app.use(logger);
+// app.use(logger);
 
 
 
 
 
-
-
-
-// DB Config     Mongo Stuff
-// mongoose.connect(connection_url, {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useUnifiedTopology: true,
-// });
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
